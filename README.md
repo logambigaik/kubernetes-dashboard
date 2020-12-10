@@ -51,12 +51,11 @@ Step2: Creating a ClusterRoleBinding
  
  Now copy the token and paste it into Enter token field on the login screen.
 
-Goto UI and give <IP-Address>:<nodeport>
- 
-  https://18.207.197.103:30001/
+# Goto UI and give <IP-Address>:<nodeport>
+   https://18.207.197.103:30001/
  
   ![image](https://user-images.githubusercontent.com/58024415/101757031-ad624400-3afc-11eb-818a-da0fba33a04a.png)
 
-Check Nodes of Cluster:
+# Check Nodes of Cluster:
   
   ![image](https://user-images.githubusercontent.com/58024415/101759134-39756b00-3aff-11eb-88a1-1b8566e6ae7a.png)
