@@ -38,21 +38,28 @@ Step2: Creating a ClusterRoleBinding
 		apiVersion: rbac.authorization.k8s.io/v1
 		kind: ClusterRoleBinding
 		metadata:
-		  name: admin-user
+  			name: admin-user
 		roleRef:
-		  apiGroup: rbac.authorization.k8s.io
-		  kind: ClusterRole
-		  name: cluster-admin
+  			apiGroup: rbac.authorization.k8s.io
+  			kind: ClusterRole
+  			name: cluster-admin
 		subjects:
-		- kind: ServiceAccount
-		  name: admin-user
-	          namespace: kubernetes-dashboard
+		- 	kind: ServiceAccount
+  			name: admin-user
+  			namespace: kubernetes-dashboard
 		EOF
-    
+
+![image](https://user-images.githubusercontent.com/54719289/116594430-19adda80-a91a-11eb-9e61-8713b8508249.png)
+
 # Getting a Bearer Token
     kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
  
  Now copy the token and paste it into Enter token field on the login screen.
+
+![image](https://user-images.githubusercontent.com/54719289/116594556-3ea24d80-a91a-11eb-8283-01154d9bd257.png)
+
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6IlVQQlRmNHppeVFQUlVwNnZBeERORGNTUVYtQUNEc3NVLTgybmpxdF9YUEEifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLW16dmxkIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiI1MmI3YWYwMi0wZDQ3LTRiZDgtYTRmMC1mNjZjNzE3NDJkMWMiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.DnwOeltSaeMQkEn8_zQOY-xidlTWztNH_3piKTadEFZHGEIlGwHVZiq-jKvu8zsIMpsbQ7_vOBXG10yHDXGs3nBGUn5dT7QG6xT71mDPl6R-EvGo6NgS3g3YdNg9dfgsHq-Yb_62zQTR06U8C_Dby0GlBLKsgCr_OjJlmUYSLjaGtqwTlP_QCJVajliJQVidgl9CV9jSc8Oqc0CUSFQJk7_ia_9_OtNOlYBtne2b4HWzTOfPuf3lia3u55BY0wqIh45CcEtaiW8Q4Axf2eJjm3Xf7uOiE9016VAfb9V3bYda2QUzy1GJmiOr-EDPhA0oKRdt-dc5b0EMyHcS-IRMYg
+
 
 # Goto UI and give <IP-Address>:<nodeport>
    https://18.207.197.103:30001/
