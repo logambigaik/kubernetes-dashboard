@@ -17,6 +17,9 @@ Need to Edit service type from ClusterIP to NodePort in "kubernetes-dashboard" s
     
 Note: Add Nodeport portnumber in security group of cluster nodes
 
+![image](https://user-images.githubusercontent.com/54719289/116592462-f08c4a80-a917-11eb-82d7-152a26032733.png)
+
+
 # Accessing the Dashboard UI:
 Step1: Creating sample user
   we will find out how to create a new user using Service Account mechanism of Kubernetes, grant this user admin permissions and login to Dashboard using bearer token tied to this user.
