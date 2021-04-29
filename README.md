@@ -46,7 +46,7 @@ Step2: Creating a ClusterRoleBinding
 		  subjects:
 		  - kind: ServiceAccount
 		  name: admin-user
-		  namespace: kubernetes-dashboard
+	        namespace: kubernetes-dashboard
 		EOF
     
 # Getting a Bearer Token
