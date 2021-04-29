@@ -43,10 +43,10 @@ Step2: Creating a ClusterRoleBinding
 		  apiGroup: rbac.authorization.k8s.io
 		  kind: ClusterRole
 		  name: cluster-admin
-		  subjects:
-		  - kind: ServiceAccount
+		subjects:
+		- kind: ServiceAccount
 		  name: admin-user
-	        namespace: kubernetes-dashboard
+	          namespace: kubernetes-dashboard
 		EOF
     
 # Getting a Bearer Token
