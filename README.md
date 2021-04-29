@@ -38,9 +38,9 @@ Step2: Creating a ClusterRoleBinding
 		apiVersion: rbac.authorization.k8s.io/v1
 		kind: ClusterRoleBinding
 		metadata:
-		name: admin-user
+		  name: admin-user
 		roleRef:
-		apiGroup: rbac.authorization.k8s.io
+		  apiGroup: rbac.authorization.k8s.io
 		kind: ClusterRole
 		name: cluster-admin
 		subjects:
